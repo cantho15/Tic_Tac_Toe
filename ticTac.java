@@ -12,14 +12,14 @@ public class ticTac{
             System.out.println("x wins");
             winner = "X";
         }
-        else if ((board[0].equals("y") && board[1].equals("y") && board[2].equals("y"))||
-        (board[0].equals("y") && board[3].equals("y") && board[6].equals("y"))||
-        (board[1].equals("y") && board[4].equals("y") && board[7].equals("y"))||
-        (board[2].equals("y") && board[5].equals("y") && board[8].equals("y"))||
-        (board[0].equals("y") && board[4].equals("y") && board[8].equals("y"))||
-        (board[2].equals("y") && board[4].equals("y") && board[6].equals("y"))){
-            System.out.println("O wins");
-            winner = "O";
+        else if ((board[0].equals("o") && board[1].equals("o") && board[2].equals("o"))||
+        (board[0].equals("o") && board[3].equals("o") && board[6].equals("o"))||
+        (board[1].equals("o") && board[4].equals("o") && board[7].equals("o"))||
+        (board[2].equals("o") && board[5].equals("o") && board[8].equals("o"))||
+        (board[0].equals("o") && board[4].equals("o") && board[8].equals("o"))||
+        (board[2].equals("o") && board[4].equals("o") && board[6].equals("o"))){
+            System.out.println("o wins");
+            winner = "o";
         }
     }
     static void printBoard(){
@@ -37,7 +37,7 @@ public class ticTac{
         System.out.println("Welcome to tic tac toe, x will go first. Enter a spot to place an x in.");
         while(winner == null){
             if(xturn){
-                System.out.println("it is X turn");
+                System.out.println("it is o turn");
                 int num = scan.nextInt();
                 if(board[num-1].equals("x")||board[num-1].equals("o")||num>9||num<1){
                     System.out.println("Invalid selection choose another space");
@@ -48,7 +48,7 @@ public class ticTac{
                     xturn = false;
                 }
             } else {
-                System.out.println("it is O turn");
+                System.out.println("it is o turn");
                 int num = scan.nextInt();
                 if(board[num-1].equals("x")||board[num-1].equals("o")|| num > 9 || num < 1){
                     System.out.println("Invalid selection choose another space");
